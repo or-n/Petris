@@ -12,6 +12,7 @@ public:
 private:
 
     sf::ContextSettings getDefaultContextSettings() const;
+    void initImGui();
     void initCircle();
     void processEvents();
     void iterate();

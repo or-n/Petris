@@ -3,11 +3,7 @@
 void Application::run() {
     window = new sf::RenderWindow(sf::VideoMode(1920, 1080), "Petris", sf::Style::Fullscreen, getDefaultContextSettings());
     window->setFramerateLimit(128);
-
-    ImGui::SFML::Init(*window);
-    ImGuiIO &io = ImGui::GetIO();
-    io.FontGlobalScale = 5;
-
+    initImGui();
     initCircle();
     loadAndPlayMusic();
 
@@ -66,6 +62,12 @@ sf::ContextSettings Application::getDefaultContextSettings() const {
     settings.majorVersion = 3;
     settings.minorVersion = 0;
     return settings;
+}
+
+void Application::initImGui() {
+    ImGui::SFML::Init(*window);
+    ImGuiIO &io = ImGui::GetIO();
+    io.FontGlobalScale = 5;
 }
 
 void Application::initCircle() {
