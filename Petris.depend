@@ -599,12 +599,8 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1493587891 source:c:\users\pan kulomb\desktop\projects\github\petris\main.cpp
-	<contest.h>
-	<imgui.h>
-	<imgui-SFML.h>
-	<SFML/Graphics.hpp>
-	<SFML/Audio.hpp>
+1493653851 source:c:\users\pan kulomb\desktop\projects\github\petris\main.cpp
+	"Application.h"
 
 1493491792 c:\users\pan kulomb\desktop\projects\github\petris\imgui-sfml\imgui.h
 	"imconfig.h"
@@ -788,4 +784,16 @@
 	<imgui-SFML.h>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
+
+1493654037 c:\users\pan kulomb\desktop\projects\github\petris\include\application.h
+	"Globals.h"
+
+1493652657 c:\users\pan kulomb\desktop\projects\github\petris\include\globals.h
+	<imgui.h>
+	<imgui-SFML.h>
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+
+1493653999 source:c:\users\pan kulomb\desktop\projects\github\petris\src\application.cpp
+	"Application.h"
 
