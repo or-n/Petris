@@ -1,16 +1,16 @@
 #include "Application.h"
 
 void Application::run() {
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Petris", sf::Style::Fullscreen, getDefaultContextSettings());
-    window.setFramerateLimit(128);
+    window = new sf::RenderWindow(sf::VideoMode(1920, 1080), "Petris", sf::Style::Fullscreen, getDefaultContextSettings());
+    window->setFramerateLimit(128);
 
-    ImGui::SFML::Init(window);
+    ImGui::SFML::Init(*window);
     ImGuiIO &io = ImGui::GetIO();
     io.FontGlobalScale = 5;
 
     circle.setRadius(50);
     circle.setPointCount(8);
-    circle.setPosition(window.getSize().x * 1.0 / 3, window.getSize().y * 2.0 / 3);
+    circle.setPosition(window->getSize().x * 1.0 / 3, window->getSize().y * 2.0 / 3);
     circle.setFillColor(sf::Color(255, 0, 0, 63));
 
     loadAndPlayMusic();
@@ -21,23 +21,11 @@ void Application::run() {
     sf::Sprite bg;
     bg.setTexture(bgTexture);
 
-    const sf::Vector2f imgSize = sf::Vector2f(bgTexture.getSize().x / 2, bgTexture.getSize().y / 2);
-
-    while(window.isOpen()) {
-        bool wasLAlt = sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt);
-        sf::Event event;
-        while(window.pollEvent(event)) {
-            ImGui::SFML::ProcessEvent(event);
-            if(event.type == sf::Event::Closed)
-                window.close();
-        }
-        bool isLAlt = sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt);
-        if(!isLAlt && wasLAlt && sf::Keyboard::isKeyPressed(sf::Keyboard::F4))
-           window.close();
-
+    while(window->isOpen()) {
+        processEvents();
         iterate();
 
-        ImGui::SFML::Update(window, deltaClock.restart());
+        ImGui::SFML::Update(*window, deltaClock.restart());
         setStyle();
 
         ImGui::Begin("", nullptr, ImVec2(0, 0), 0, ImGuiWindowFlags_AlwaysAutoResize |
@@ -61,15 +49,17 @@ void Application::run() {
         ImGui::SetCursorPosX(1200);
         ImGui::SetCursorPosY(500);
         if(ImGui::Button("Quit Game"))
-            window.close();
+            window->close();
 
         ImGui::End();
 
-        window.draw(bg);
-        window.draw(circle);
+        window->draw(bg);
+        window->draw(circle);
         ImGui::Render();
-        window.display();
+        window->display();
     }
+
+    delete window;
 }
 
 sf::ContextSettings Application::getDefaultContextSettings() const {
@@ -80,6 +70,33 @@ sf::ContextSettings Application::getDefaultContextSettings() const {
     settings.majorVersion = 3;
     settings.minorVersion = 0;
     return settings;
+}
+
+void Application::processEvents() {
+    bool wasLAlt = sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt);
+    sf::Event event;
+    while(window->pollEvent(event)) {
+        ImGui::SFML::ProcessEvent(event);
+        if(event.type == sf::Event::Closed)
+            window->close();
+    }
+    bool isLAlt = sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt);
+    if(!isLAlt && wasLAlt && sf::Keyboard::isKeyPressed(sf::Keyboard::F4))
+       window->close();
+}
+
+void Application::iterate() {
+    if(iterationClock.getElapsedTime().asMilliseconds() < 10)
+        return;
+    iterationClock.restart();
+    ++iteration;
+    circle.move(sin(iteration / 20.0) * 10.0, cos(iteration / 10.0) * 10.0);
+    circle.rotate(1);
+    circle.setFillColor(sf::Color(255, 255, 0, (sin(iteration / 40.0) + 1) * 127));
+    color.w += sin(iteration / 10.0) / 40.0;
+    textColor.x -= sin(iteration / 10.0) / 40.0;
+    textColor.y -= cos(iteration / 10.0) / 40.0;
+    textColor.z -= cos(iteration / 20.0) / 40.0;
 }
 
 void Application::loadAndPlayMusic() {
@@ -95,18 +112,4 @@ void Application::setStyle() {
     style.Colors[ImGuiCol_ButtonHovered] = colorHovered;
     style.Colors[ImGuiCol_ButtonActive] = colorActive;
     style.Colors[ImGuiCol_Text] = textColor;
-}
-
-void Application::iterate() {
-    if(iterationClock.getElapsedTime().asMilliseconds() < 10)
-        return;
-    iterationClock.restart();
-    ++iteration;
-    circle.move(sin(iteration / 20.0) * 10.0, cos(iteration / 10.0) * 10.0);
-    circle.rotate(1);
-    circle.setFillColor(sf::Color(255, 255, 0, (sin(iteration / 40.0) + 1) * 127));
-    color.w += sin(iteration / 10.0) / 40.0;
-    textColor.x -= sin(iteration / 10.0) / 40.0;
-    textColor.y -= cos(iteration / 10.0) / 40.0;
-    textColor.z -= cos(iteration / 20.0) / 40.0;
 }
