@@ -14,6 +14,7 @@ private:
     sf::ContextSettings getDefaultContextSettings() const;
     void setStyle();
     void iterate();
+    void loadAndPlayMusic();
 
     ImVec4 colorActive = ImVec4(.5, 0, 0, .9);
     ImVec4 colorHovered = ImVec4(.4, 0, 0, .7);
@@ -23,4 +24,5 @@ private:
     int iteration = 0;
     sf::Clock iterationClock, deltaClock;
     sf::CircleShape circle;
+    sf::Music music;
 };

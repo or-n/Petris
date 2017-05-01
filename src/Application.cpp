@@ -13,11 +13,7 @@ void Application::run() {
     circle.setPosition(window.getSize().x * 1.0 / 3, window.getSize().y * 2.0 / 3);
     circle.setFillColor(sf::Color(255, 0, 0, 63));
 
-    sf::Music music;
-    if(music.openFromFile(ResourcesPath + "TetrisThemeDubstep.ogg"))
-        music.setVolume(20),
-        music.setLoop(true),
-        music.play();
+    loadAndPlayMusic();
 
     sf::Texture bgTexture;
     bgTexture.loadFromFile(ResourcesPath + "papieprz.png");
@@ -84,6 +80,13 @@ sf::ContextSettings Application::getDefaultContextSettings() const {
     settings.majorVersion = 3;
     settings.minorVersion = 0;
     return settings;
+}
+
+void Application::loadAndPlayMusic() {
+    if(music.openFromFile(ResourcesPath + "TetrisThemeDubstep.ogg"))
+        music.setVolume(50),
+        music.setLoop(true),
+        music.play();
 }
 
 void Application::setStyle() {
