@@ -8,11 +8,7 @@ void Application::run() {
     ImGuiIO &io = ImGui::GetIO();
     io.FontGlobalScale = 5;
 
-    circle.setRadius(50);
-    circle.setPointCount(8);
-    circle.setPosition(window->getSize().x * 1.0 / 3, window->getSize().y * 2.0 / 3);
-    circle.setFillColor(sf::Color(255, 0, 0, 63));
-
+    initCircle();
     loadAndPlayMusic();
 
     sf::Texture bgTexture;
@@ -70,6 +66,13 @@ sf::ContextSettings Application::getDefaultContextSettings() const {
     settings.majorVersion = 3;
     settings.minorVersion = 0;
     return settings;
+}
+
+void Application::initCircle() {
+    circle.setRadius(50);
+    circle.setPointCount(8);
+    circle.setPosition(window->getSize().x * 1.0 / 3, window->getSize().y * 2.0 / 3);
+    circle.setFillColor(sf::Color(255, 0, 0, 63));
 }
 
 void Application::processEvents() {
