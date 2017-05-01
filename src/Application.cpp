@@ -5,13 +5,8 @@ void Application::run() {
     window->setFramerateLimit(128);
     initImGui();
     initCircle();
+    initBackground();
     loadAndPlayMusic();
-
-    sf::Texture bgTexture;
-    bgTexture.loadFromFile(ResourcesPath + "papieprz.png");
-
-    sf::Sprite bg;
-    bg.setTexture(bgTexture);
 
     while(window->isOpen())
         processEvents(),
@@ -47,6 +42,18 @@ void Application::initCircle() {
     circle.setFillColor(sf::Color(255, 0, 0, 63));
 }
 
+void Application::initBackground() {
+    bgTexture.loadFromFile(ResourcesPath + "papieprz.png");
+    bg.setTexture(bgTexture);
+}
+
+void Application::loadAndPlayMusic() {
+    if(music.openFromFile(ResourcesPath + "TetrisThemeDubstep.ogg"))
+        music.setVolume(50),
+        music.setLoop(true),
+        music.play();
+}
+
 void Application::processEvents() {
     bool wasLAlt = sf::Keyboard::isKeyPressed(sf::Keyboard::LAlt);
     sf::Event event;
@@ -72,13 +79,6 @@ void Application::iterate() {
     textColor.x -= sin(iteration / 10.0) / 40.0;
     textColor.y -= cos(iteration / 10.0) / 40.0;
     textColor.z -= cos(iteration / 20.0) / 40.0;
-}
-
-void Application::loadAndPlayMusic() {
-    if(music.openFromFile(ResourcesPath + "TetrisThemeDubstep.ogg"))
-        music.setVolume(50),
-        music.setLoop(true),
-        music.play();
 }
 
 void Application::drawGUI() {

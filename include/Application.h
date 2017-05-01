@@ -14,6 +14,7 @@ private:
     sf::ContextSettings getDefaultContextSettings() const;
     void initImGui();
     void initCircle();
+    void initBackground();
     void loadAndPlayMusic();
     void processEvents();
     void iterate();
@@ -29,5 +30,7 @@ private:
     sf::RenderWindow *window = nullptr;
     sf::Clock iterationClock, deltaClock;
     sf::CircleShape circle;
+    sf::Texture bgTexture;
+    sf::Sprite bg;
     sf::Music music;
 };
