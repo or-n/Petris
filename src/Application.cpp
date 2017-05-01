@@ -13,43 +13,13 @@ void Application::run() {
     sf::Sprite bg;
     bg.setTexture(bgTexture);
 
-    while(window->isOpen()) {
-        processEvents();
-        iterate();
-
-        ImGui::SFML::Update(*window, deltaClock.restart());
-        setStyle();
-
-        ImGui::Begin("", nullptr, ImVec2(0, 0), 0, ImGuiWindowFlags_AlwaysAutoResize |
-            ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoSavedSettings);
-
-        ImGui::SetCursorPosX(1200);
-        ImGui::SetCursorPosY(200);
-        if(ImGui::Button("Play Game"))
-            ;
-
-        ImGui::SetCursorPosX(1200);
-        ImGui::SetCursorPosY(300);
-        if(ImGui::Button("Options"))
-            ;
-
-        ImGui::SetCursorPosX(1200);
-        ImGui::SetCursorPosY(400);
-        if(ImGui::Button("About"))
-            ;
-
-        ImGui::SetCursorPosX(1200);
-        ImGui::SetCursorPosY(500);
-        if(ImGui::Button("Quit Game"))
-            window->close();
-
-        ImGui::End();
-
-        window->draw(bg);
-        window->draw(circle);
-        ImGui::Render();
+    while(window->isOpen())
+        processEvents(),
+        iterate(),
+        window->draw(bg),
+        window->draw(circle),
+        drawGUI(),
         window->display();
-    }
 
     delete window;
 }
@@ -109,6 +79,36 @@ void Application::loadAndPlayMusic() {
         music.setVolume(50),
         music.setLoop(true),
         music.play();
+}
+
+void Application::drawGUI() {
+    ImGui::SFML::Update(*window, deltaClock.restart());
+    setStyle();
+    ImGui::Begin("", nullptr, ImVec2(0, 0), 0, ImGuiWindowFlags_AlwaysAutoResize |
+        ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoSavedSettings);
+
+    ImGui::SetCursorPosX(1200);
+    ImGui::SetCursorPosY(200);
+    if(ImGui::Button("Play Game"))
+        ;
+
+    ImGui::SetCursorPosX(1200);
+    ImGui::SetCursorPosY(300);
+    if(ImGui::Button("Options"))
+        ;
+
+    ImGui::SetCursorPosX(1200);
+    ImGui::SetCursorPosY(400);
+    if(ImGui::Button("About"))
+        ;
+
+    ImGui::SetCursorPosX(1200);
+    ImGui::SetCursorPosY(500);
+    if(ImGui::Button("Quit Game"))
+        window->close();
+
+    ImGui::End();
+    ImGui::Render();
 }
 
 void Application::setStyle() {

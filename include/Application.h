@@ -14,10 +14,11 @@ private:
     sf::ContextSettings getDefaultContextSettings() const;
     void initImGui();
     void initCircle();
+    void loadAndPlayMusic();
     void processEvents();
     void iterate();
+    void drawGUI();
     void setStyle();
-    void loadAndPlayMusic();
 
     ImVec4 colorActive = ImVec4(.5, 0, 0, .9);
     ImVec4 colorHovered = ImVec4(.4, 0, 0, .7);
