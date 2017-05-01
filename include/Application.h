@@ -11,6 +11,7 @@ public:
 
 private:
 
+    sf::ContextSettings getDefaultContextSettings() const;
     void setStyle();
     void iterate();
 

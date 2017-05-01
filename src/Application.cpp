@@ -1,14 +1,7 @@
 #include "Application.h"
 
 void Application::run() {
-    sf::ContextSettings settings;
-    settings.depthBits = 24;
-    settings.stencilBits = 8;
-    settings.antialiasingLevel = 4;
-    settings.majorVersion = 3;
-    settings.minorVersion = 0;
-
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Petris", sf::Style::Fullscreen, settings);
+    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Petris", sf::Style::Fullscreen, getDefaultContextSettings());
     window.setFramerateLimit(128);
 
     ImGui::SFML::Init(window);
@@ -81,6 +74,16 @@ void Application::run() {
         ImGui::Render();
         window.display();
     }
+}
+
+sf::ContextSettings Application::getDefaultContextSettings() const {
+    sf::ContextSettings settings;
+    settings.depthBits = 24;
+    settings.stencilBits = 8;
+    settings.antialiasingLevel = 4;
+    settings.majorVersion = 3;
+    settings.minorVersion = 0;
+    return settings;
 }
 
 void Application::setStyle() {
