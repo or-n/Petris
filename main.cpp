@@ -1,15 +1,9 @@
-#include <imgui.h>
-#include <imgui-SFML.h>
-
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
+#include "Globals.h"
 
 ImVec4 colorActive(.5, 0, 0, .9);
 ImVec4 colorHovered = ImVec4(.4, 0, 0, .7);
 ImVec4 color = ImVec4(.125, .1, .1, .7);
 ImVec4 textColor = ImVec4(1, 1, 1, .7);
-
-const std::string ResourcesPath = "../Resources/";
 
 void setStyle() {
     ImGuiStyle &style = ImGui::GetStyle();
