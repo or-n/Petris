@@ -797,13 +797,13 @@
 1493723066 source:c:\users\pan kulomb\desktop\projects\github\petris\src\application.cpp
 	"Application.h"
 
-1493764969 c:\users\pan kulomb\desktop\projects\github\petris\include\model.h
-	"Globals.h"
+1493833297 c:\users\pan kulomb\desktop\projects\github\petris\include\model.h
+	"MVC.h"
 
-1493799979 c:\users\pan kulomb\desktop\projects\github\petris\include\view.h
+1493833229 c:\users\pan kulomb\desktop\projects\github\petris\include\view.h
 	"Model.h"
 
-1493765000 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
+1493833246 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
 	"View.h"
 
 1493765030 source:c:\users\pan kulomb\desktop\projects\github\petris\src\controller.cpp
@@ -814,4 +814,7 @@
 
 1493799885 source:c:\users\pan kulomb\desktop\projects\github\petris\src\view.cpp
 	"View.h"
+
+1493833200 c:\users\pan kulomb\desktop\projects\github\petris\include\mvc.h
+	"Globals.h"
 
