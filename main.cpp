@@ -1,6 +1,6 @@
-#include "Application.h"
+#include "Controller.h"
 
 int main() {
-    Application app;
-    app.run();
+    Game game;
+    game.run();
 }

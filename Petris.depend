@@ -599,8 +599,8 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1493653851 source:c:\users\pan kulomb\desktop\projects\github\petris\main.cpp
-	"Application.h"
+1493731574 source:c:\users\pan kulomb\desktop\projects\github\petris\main.cpp
+	"Controller.h"
 
 1493491792 c:\users\pan kulomb\desktop\projects\github\petris\imgui-sfml\imgui.h
 	"imconfig.h"
@@ -785,15 +785,33 @@
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 
-1493656729 c:\users\pan kulomb\desktop\projects\github\petris\include\application.h
+1493722368 c:\users\pan kulomb\desktop\projects\github\petris\include\application.h
 	"Globals.h"
 
-1493652657 c:\users\pan kulomb\desktop\projects\github\petris\include\globals.h
+1493723097 c:\users\pan kulomb\desktop\projects\github\petris\include\globals.h
 	<imgui.h>
 	<imgui-SFML.h>
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 
-1493655623 source:c:\users\pan kulomb\desktop\projects\github\petris\src\application.cpp
+1493723066 source:c:\users\pan kulomb\desktop\projects\github\petris\src\application.cpp
 	"Application.h"
+
+1493764969 c:\users\pan kulomb\desktop\projects\github\petris\include\model.h
+	"Globals.h"
+
+1493799979 c:\users\pan kulomb\desktop\projects\github\petris\include\view.h
+	"Model.h"
+
+1493765000 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
+	"View.h"
+
+1493765030 source:c:\users\pan kulomb\desktop\projects\github\petris\src\controller.cpp
+	"Controller.h"
+
+1493760899 source:c:\users\pan kulomb\desktop\projects\github\petris\src\model.cpp
+	"Model.h"
+
+1493799885 source:c:\users\pan kulomb\desktop\projects\github\petris\src\view.cpp
+	"View.h"
 
