@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Menu.h"
+#include "GameView.h"
 
 class Game : public Controller {
 public:
@@ -15,5 +16,5 @@ private:
 
     sf::RenderWindow window;
     Model model;
-    View *view = nullptr;
+    View *view, *menu, *gameView;
 };

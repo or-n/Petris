@@ -803,10 +803,11 @@
 1493833229 c:\users\pan kulomb\desktop\projects\github\petris\include\view.h
 	"Model.h"
 
-1493833490 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
+1493834045 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
 	"Menu.h"
+	"GameView.h"
 
-1493765030 source:c:\users\pan kulomb\desktop\projects\github\petris\src\controller.cpp
+1493834403 source:c:\users\pan kulomb\desktop\projects\github\petris\src\controller.cpp
 	"Controller.h"
 
 1493760899 source:c:\users\pan kulomb\desktop\projects\github\petris\src\model.cpp
@@ -819,5 +820,14 @@
 	"Globals.h"
 
 1493833229 c:\users\pan kulomb\desktop\projects\github\petris\include\menu.h
+	"Model.h"
+
+1493833942 source:c:\users\pan kulomb\desktop\projects\github\petris\src\menu.cpp
+	"Menu.h"
+
+1493833875 source:c:\users\pan kulomb\desktop\projects\github\petris\src\gameview.cpp
+	"GameView.h"
+
+1493833898 c:\users\pan kulomb\desktop\projects\github\petris\include\gameview.h
 	"Model.h"
 

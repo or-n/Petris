@@ -82,7 +82,7 @@ void Menu::setStyle() {
 void Menu::drawMenu() {
     nextItem();
         if(ImGui::Button("Play", ImVec2(500, 75)))
-            ;
+            controller.processEvent("Play");
     nextItem();
         if(ImGui::Button("Options", ImVec2(500, 75)))
             menu = 1;
