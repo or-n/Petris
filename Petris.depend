@@ -803,8 +803,8 @@
 1493833229 c:\users\pan kulomb\desktop\projects\github\petris\include\view.h
 	"Model.h"
 
-1493833246 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
-	"View.h"
+1493833490 c:\users\pan kulomb\desktop\projects\github\petris\include\controller.h
+	"Menu.h"
 
 1493765030 source:c:\users\pan kulomb\desktop\projects\github\petris\src\controller.cpp
 	"Controller.h"
@@ -817,4 +817,7 @@
 
 1493833200 c:\users\pan kulomb\desktop\projects\github\petris\include\mvc.h
 	"Globals.h"
+
+1493833229 c:\users\pan kulomb\desktop\projects\github\petris\include\menu.h
+	"Model.h"
 

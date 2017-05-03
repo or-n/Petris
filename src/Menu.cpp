@@ -1,4 +1,4 @@
-#include "View.h"
+#include "Menu.h"
 
 Menu::Menu(Model &model, Controller *controller, sf::RenderWindow &window)
     : model(model)
