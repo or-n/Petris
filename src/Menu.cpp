@@ -100,7 +100,7 @@ void Menu::drawOptions() {
         if(volume == 0) {
             ImGui::SetCursorPosX(x);
             ImGui::SetCursorPosY(y / 2);
-            ImGui::TextColored(ImColor(0, 255, 0), "Antycommunistico!");
+            ImGui::TextColored(ImColor(0, 255, 0), "Anticommunistico!");
         }
     nextItem();
         ImGui::PushStyleColor(ImGuiCol_Button, colorHovered);

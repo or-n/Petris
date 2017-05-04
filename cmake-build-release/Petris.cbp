@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Petris"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\SFML\;CMake Files\SFML\cmake\;CMake Files\SFML\cmake\Modules\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Petris">
+				<Option output="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Petris.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/SFML/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 Petris"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Petris/fast">
+				<Option output="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Petris.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DSFML_STATIC"/>
+					<Add directory="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/SFML/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-6.1.0-posix-seh-rt_v5-rev1/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/6.1.0/include/c++/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 Petris/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Controller.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Controller.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/GameView.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/GameView.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Globals.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/MVC.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Menu.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Menu.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Model.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Model.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imconfig-SFML.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imconfig.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui-SFML.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui-SFML.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui_demo.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui_draw.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/imgui_internal.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/stb_rect_pack.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/stb_textedit.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/imgui-sfml/stb_truetype.h">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/main.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/SFML/cmake/Modules/FindSFML.cmake">
+			<Option virtualFolder="CMake Files\SFML\cmake\Modules\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
