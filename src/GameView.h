@@ -9,8 +9,14 @@ public:
     void newFrame();
 
 private:
+	void initBlock();
+	void drawBlock(sf::Color color, sf::Vector2u position);
 
     const Model &model;
     Controller &controller;
     sf::RenderWindow &window;
+	ImGuiIO &io = ImGui::GetIO();
+	sf::VertexArray block;
+	sf::Vector2f blockSize = {io.DisplaySize.y / io.DisplaySize.x, 1};
+	sf::Shader blockShader;
 };
