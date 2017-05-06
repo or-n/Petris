@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Petris.dir/src/main.cpp.obj"
+  "CMakeFiles/Petris.dir/src/Block.cpp.obj"
   "CMakeFiles/Petris.dir/src/Controller.cpp.obj"
   "CMakeFiles/Petris.dir/src/GameView.cpp.obj"
   "CMakeFiles/Petris.dir/src/Menu.cpp.obj"

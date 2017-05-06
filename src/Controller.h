@@ -17,4 +17,6 @@ private:
     sf::RenderWindow window;
     Model model;
     View *view, *menu, *gameView;
+	sf::Clock viewClock, movementClock;
+	int viewDelay = 200;
 };

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Block.cpp" "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/CMakeFiles/Petris.dir/src/Block.cpp.obj"
   "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Controller.cpp" "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/CMakeFiles/Petris.dir/src/Controller.cpp.obj"
   "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/GameView.cpp" "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/CMakeFiles/Petris.dir/src/GameView.cpp.obj"
   "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Menu.cpp" "C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/cmake-build-release/CMakeFiles/Petris.dir/src/Menu.cpp.obj"

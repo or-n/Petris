@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Block.cpp">
+			<Option target="Petris"/>
+		</Unit>
+		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Block.h">
+			<Option target="Petris"/>
+		</Unit>
 		<Unit filename="C:/Users/Pan Kulomb/Desktop/Projects/Github/Petris/src/Controller.cpp">
 			<Option target="Petris"/>
 		</Unit>

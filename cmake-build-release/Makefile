@@ -122,6 +122,33 @@ Petris/fast:
 	$(MAKE) -f CMakeFiles\Petris.dir\build.make CMakeFiles/Petris.dir/build
 .PHONY : Petris/fast
 
+src/Block.obj: src/Block.cpp.obj
+
+.PHONY : src/Block.obj
+
+# target to build an object file
+src/Block.cpp.obj:
+	$(MAKE) -f CMakeFiles\Petris.dir\build.make CMakeFiles/Petris.dir/src/Block.cpp.obj
+.PHONY : src/Block.cpp.obj
+
+src/Block.i: src/Block.cpp.i
+
+.PHONY : src/Block.i
+
+# target to preprocess a source file
+src/Block.cpp.i:
+	$(MAKE) -f CMakeFiles\Petris.dir\build.make CMakeFiles/Petris.dir/src/Block.cpp.i
+.PHONY : src/Block.cpp.i
+
+src/Block.s: src/Block.cpp.s
+
+.PHONY : src/Block.s
+
+# target to generate assembly for a file
+src/Block.cpp.s:
+	$(MAKE) -f CMakeFiles\Petris.dir\build.make CMakeFiles/Petris.dir/src/Block.cpp.s
+.PHONY : src/Block.cpp.s
+
 src/Controller.obj: src/Controller.cpp.obj
 
 .PHONY : src/Controller.obj
@@ -374,6 +401,9 @@ help:
 	@echo ... Petris
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/Block.obj
+	@echo ... src/Block.i
+	@echo ... src/Block.s
 	@echo ... src/Controller.obj
 	@echo ... src/Controller.i
 	@echo ... src/Controller.s

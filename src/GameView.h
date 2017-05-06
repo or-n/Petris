@@ -11,6 +11,7 @@ public:
 private:
 	void initBlock();
 	void drawBlock(sf::Color color, sf::Vector2u position);
+	void drawGUI();
 
     const Model &model;
     Controller &controller;
@@ -19,4 +20,6 @@ private:
 	sf::VertexArray block;
 	sf::Vector2f blockSize = {io.DisplaySize.y / io.DisplaySize.x, 1};
 	sf::Shader blockShader;
+	sf::Clock deltaClock;
+	sf::Color borderColor = sf::Color(63, 63, 63);
 };

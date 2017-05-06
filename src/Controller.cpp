@@ -16,7 +16,20 @@ void Game::run() {
         sf::Event event;
         while(window.pollEvent(event))
             processEvent(event);
+	    if(movementClock.getElapsedTime().asMilliseconds() > 50) {
+		    movementClock.restart();
+		    viewDelay = 200;
+		    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+			    model.moveLeft();
+		    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+			    model.moveRight();
+		    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+			    viewDelay = 50;
+	    }
         view->newFrame();
+	    if(view == gameView && viewClock.getElapsedTime().asMilliseconds() > viewDelay)
+		    viewClock.restart(),
+		    model.iterate();
     }
     delete menu;
     delete gameView;
@@ -24,12 +37,15 @@ void Game::run() {
 }
 
 void Game::processEvent(const sf::Event &event) {
-    ImGui::SFML::ProcessEvent(event);
-    if(event.type == sf::Event::Closed)
-        window.close();
-    else if(event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
-        if(view == gameView)
-            view = menu;
+	ImGui::SFML::ProcessEvent(event);
+	if(event.type == sf::Event::Closed)
+		window.close();
+	else if(event.type == sf::Event::KeyPressed)
+		if(view == gameView)
+			if(event.key.code == sf::Keyboard::Escape)
+				view = menu;
+			else if(event.key.code == sf::Keyboard::Up)
+				model.rotateRight();
 }
 
 void Game::processEvent(const std::string &event) {
@@ -37,6 +53,8 @@ void Game::processEvent(const std::string &event) {
         window.close();
     else if(event == "Play")
         view = gameView;
+    else if(event == "Clear")
+	    model.clearMap();
     else if(event.find("Volume") == 0) {
         int volume;
         sscanf(event.c_str(), "Volume %d", &volume);
