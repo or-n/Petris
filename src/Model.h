@@ -9,7 +9,7 @@ public:
     virtual ~Model();
 	void iterate();
     void loadAndPlayMusic();
-	sf::Color getColor(int x, int y) const;
+	sf::Color getColor(unsigned x, unsigned y) const;
 	void moveLeft();
 	void moveRight();
 	void rotateLeft();
@@ -18,6 +18,7 @@ public:
 
 	static const int Width = 10;
 	static const int Height = 22;
+	static const int TetrominoesAmount = 7;
 
     sf::Music music;
 
@@ -29,8 +30,8 @@ private:
 
 	sf::Color map[Width][Height];
 	sf::Color clearColor = sf::Color::Transparent;
-	Block blocks[7];
+	Block blocks[TetrominoesAmount];
 	int actualBlock;
-	char tetrominos[7] = {'I', 'O', 'T', 'S', 'Z', 'J', 'L'};
-	int width, height;
+	char tetrominos[TetrominoesAmount] = {'I', 'O', 'T', 'S', 'Z', 'J', 'L'};
+	int x, y;
 };

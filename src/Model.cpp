@@ -2,7 +2,7 @@
 
 Model::Model() {
     loadAndPlayMusic();
-	for(int i = 0; i < 7; ++i)
+	for(int i = 0; i < TetrominoesAmount; ++i)
 		blocks[i].loadFromFile(ResourcesPath + tetrominos[i]);
 	clearMap();
 }
@@ -12,9 +12,9 @@ Model::~Model() {
 
 void Model::iterate() {
 	pop();
-	--height;
+	--y;
 	if(isCollision()) {
-		++height;
+		++y;
 		push();
 		spawnBlock();
 	}
@@ -29,9 +29,9 @@ void Model::loadAndPlayMusic() {
         music.play();
 }
 
-sf::Color Model::getColor(int x, int y) const {
-	assert(x >= 0 && x < Width);
-	assert(y >= 0 && y < Height);
+sf::Color Model::getColor(unsigned x, unsigned y) const {
+	assert(x < Width);
+	assert(y < Height);
 	return map[x][y];
 }
 
@@ -45,8 +45,8 @@ void Model::clearMap() {
 void Model::spawnBlock() {
 	actualBlock = rand() % 7;
 	blocks[actualBlock].clearRotation();
-	width = Width >> 1;
-	height = Height - 1;
+	x = Width >> 1;
+	y = Height - 1;
 	if(!isCollision())
 		push();
 }
@@ -55,8 +55,8 @@ bool Model::isCollision() {
 	sf::Vector2i position;
 	for(int i = 0; i < blocks[actualBlock].getPointsAmount(); ++i) {
 		position = blocks[actualBlock].getPoint(i),
-		position.x =  position.x / 2 + width,
-		position.y = -position.y / 2 + height;
+		position.x = x + position.x / 2,
+		position.y = y - position.y / 2;
 		if(position.x < 0 || position.x >= Width
 		|| position.y < 0 || position.y >= Height
 	    || map[position.x][position.y] != clearColor)
@@ -70,8 +70,8 @@ void Model::push() {
 	sf::Vector2i position;
 	for(int i = 0; i < blocks[actualBlock].getPointsAmount(); ++i)
 		position = blocks[actualBlock].getPoint(i),
-		position.x =  position.x / 2 + width,
-		position.y = -position.y / 2 + height,
+		position.x = x + position.x / 2,
+		position.y = y - position.y / 2,
         map[position.x][position.y] = blocks[actualBlock].getColor();
 }
 
@@ -80,24 +80,24 @@ void Model::pop() {
 	sf::Vector2i position;
 	for(int i = 0; i < blocks[actualBlock].getPointsAmount(); ++i)
 		position = blocks[actualBlock].getPoint(i),
-		position.x =  position.x / 2 + width,
-		position.y = -position.y / 2 + height,
+		position.x = x + position.x / 2,
+		position.y = y - position.y / 2,
 		map[position.x][position.y] = clearColor;
 }
 
 void Model::moveLeft() {
 	pop();
-	--width;
+	--x;
 	if(isCollision())
-		++width;
+		++x;
 	push();
 }
 
 void Model::moveRight() {
 	pop();
-	++width;
+	++x;
 	if(isCollision())
-		--width;
+		--x;
 	push();
 }
 
