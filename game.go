@@ -102,7 +102,7 @@ func GameDraw() {
 			DrawRectangleV(Vector2Add(p, min), s, grid[y][x])
 		}
 	}
-	DrawText(strconv.Itoa(score), int32(screen.X/4), int32(screen.Y/2), 40, White)
+	DrawText(strconv.Itoa(score), int32(screen.X/4), int32(screen.Y/2), 40, Green)
 }
 
 func GameUpdate() {

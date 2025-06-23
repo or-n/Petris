@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	. "github.com/gen2brain/raylib-go/raylib"
-	"os"
+	// "os"
 	"slices"
 	"strconv"
 	"strings"
@@ -45,7 +45,8 @@ func (s *Shape) LoadShapeHandleError(path string) {
 }
 
 func (s *Shape) LoadShape(path string) error {
-	data, err := os.ReadFile(path)
+	// data, err := os.ReadFile(path)
+	data, err := ASSETS.ReadFile(path)
 	if err != nil {
 		return err
 	}

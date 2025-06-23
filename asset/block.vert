@@ -1,23 +1,17 @@
-#version 300 es
-  
-layout (location = 0) in vec3 _pos;
+#version 100
 
-out vec4 color;
-out vec2 blockPos;
-out vec2 blockSize;
+attribute vec3 vertexPosition;
+attribute vec3 vertexNormal;
+attribute vec4 vertexColor;
 
-out vec4 pos;
+uniform vec2 blep;
 
-uniform vec4 _color;
-uniform vec2 _blockPos;
-uniform vec2 _blockSize;
+varying vec4 fragColorInput;
 
 void main() {
-	color = _color;
-	blockPos = _blockPos;
-	blockSize = _blockSize;
-	
-	gl_Position = vec4(_pos.x * _blockSize.x, _pos.y * _blockSize.y, _pos.z, 1.0);
-	gl_Position.xy += _blockPos;
-	pos = gl_Position;
+    float x = ((vertexPosition.x + blep.x) / 1920.0) * 2.0 - 1.0;
+    float y = -(((vertexPosition.y + blep.y) / 1080.0) * 2.0 - 1.0);
+    gl_Position = vec4(x, y, 0.0, 1.0);
+    // gl_Position = vec4(vertexPosition, 1.0);
+    fragColorInput = vertexColor;
 }
