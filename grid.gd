@@ -86,6 +86,33 @@ func _input(event):
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 		fullscreen = not fullscreen
 
+func _unhandled_input(event):
+	if event is InputEventScreenTouch or event is InputEventMouseButton:
+		if event.pressed:
+			_handle_press(event.position)
+		else:
+			_handle_release()
+
+func _handle_press(pos: Vector2):
+	var center = get_viewport().get_visible_rect().size / 2
+	var direction = (pos - center).normalized()
+	if abs(direction.x) > abs(direction.y):
+		if direction.x < 0:
+			Input.action_press("left")
+		else:
+			Input.action_press("right")
+	else:
+		if direction.y > 0:
+			Input.action_press("speed_up")
+		else:
+			Input.action_press("rotate")
+
+func _handle_release():
+	Input.action_release("left")
+	Input.action_release("right")
+	Input.action_release("speed_up")
+	Input.action_release("rotate")
+
 func _process(delta):
 	$Label.text = "Score: %d" % score
 	if Input.is_action_just_pressed("quit"):
